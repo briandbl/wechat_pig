@@ -8,9 +8,10 @@ from wechatpy.exceptions import InvalidSignatureException
 from wechatpy.exceptions import InvalidAppIdException
 
 # set token or get from environments
-TOKEN = os.getenv('WECHAT_TOKEN', '123456')
-EncodingAESKey = os.getenv('WECHAT_ENCODING_AES_KEY', '')
-AppId = os.getenv('WECHAT_APP_ID', '')
+
+TOKEN = os.getenv('WECHAT_TOKEN', 'brian722')
+AES_KEY = os.getenv('WECHAT_AES_KEY', 'a636227739200a71b1ec76be9e5bec81')
+AppId = os.getenv('WECHAT_APP_ID', 'wxc7ffbe44cacb90d0')
 
 app = Flask(__name__)
 
@@ -69,4 +70,4 @@ def wechat():
 
 
 if __name__ == '__main__':
-    app.run('127.0.0.1', 5001, debug=True)
+    app.run('172.105.211.174', 80, debug=True)
